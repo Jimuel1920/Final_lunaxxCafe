@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Reports
+{% endblock %}
+
+{% block content %}
+
+<style>
+ .containers{
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  border: black;
+  box-shadow: 0 5px 10px rgba(15,12,12.15);
+  height: 500px;
+}
+.containers .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+
+
+
+</style>
+<div class="containers">
+        <div class="order">
+          <div class="col-12 my-2">
+            <div class="row my-2">
+              <div class="head">
+                <h3>Reports</h3>
+
+              </div>
+              <div class="row">
+                <div class="col-md-auto my-2">
+                  <form class="form-group row">
+                    <div class="col-sm-auto col-form-label">
+                      View by:
+                    </div>
+
+                    <div class="col-sm-auto">
+                      <select class="form-select mb-3" id="myselection">
+                        <option value="items">Items</option>
+                        <option value="categories">Categories</option>
+                      </select>
+                    </div>
+                  </form>
+
+                </div>
+
+
+                <div class="col-sm-auto my-2">
+                  <div class="form-group row">
+                    <div class="col-sm-auto col-form-label">
+                      Range:
+                    </div>
+                    <div class="col-sm-auto">
+                      <input type="date" class="form-control btn-outline-primary">
+                    </div>
+
+                    <div class="col-sm-auto col-form-label">
+                      to
+                    </div>
+
+                    <div class="col-sm-auto">
+                      <input type="date" class="form-control btn-outline-primary">
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="col-sm-auto my-2">
+                  <div class="dropdown">
+                    <button class="btn btn-outline-success dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class='bx bx-printer'></i> Export
+                    </button>
+                    <div class="dropdown-menu" style="min-width: 115px; margin-top: 7px;">
+                      <button class="dropdown-item" type="button" id="cvs-download"><i class="icon bi bi-filetype-csv"></i> CSV</button>
+                      <button class="dropdown-item" type="button" id="pdf-download" onclick="createPDF()"><i class="icon bi bi-filetype-pdf"></i> PDF</button>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-sm-auto my-2">
+                  <button class="btn btn-outline-primary btn-block" type="button"><i class='bx bx-printer'></i> print</button>
+                </div>
+              </div>
+
+
+
+            </div>
+            <hr>
+            <div class="myDiv" id="showitems">
+              <table class="table table-bordered">
+                <thead>
+                  <th>Name</th>
+                  <th>items sold</td>
+                  <th>E-pay</th>
+                  <th>Total</th>
+                  <th>Balance</th>
+                  <th>Date</th>
+                </thead>
+                <tbody>
+                  <td> James</td>
+                    <td>22</td>
+                    <td>Paypal</td>
+                    <td>1400</td>
+                    <td>0</td>
+                    <td>06/07/2021</td>
+                    
+                    
+                
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+{% endblock %}
